@@ -105,7 +105,7 @@ def calculate_stock_data(data):
     """
     Calculate the average stock for each item type, adding 5%
     """
-    print("Frothing milk and counting coffee beans...\n")
+    print("Frothing milk and pouring fresh coffee...\n")
     new_stock_data = []
 
     for column in data:

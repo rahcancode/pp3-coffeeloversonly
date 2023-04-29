@@ -83,6 +83,6 @@ PEP8 Validator - used for validating the python code
 Heroku - used for deploying the project
 asciiart.eu - for the coffee mug ascii art
 https://learnlearn.uk/python/ascii-art/ - for how to add the ascii art to my project
-http://patorjk.com/software/taag/#p=about&f=Ogre&t=Coffee%20Lovers%20Only - for the ascii text of "Coffee Lovers Only", in font Ogre
+http://patorjk.com/software/taag/#p=testall&f=Efti%20Wall&t=Coffee%20Lovers%20Only - for the ascii text of "Coffee Lovers Only", in font Efti Wall
 
 ACKNOWLEDGEMENTS
