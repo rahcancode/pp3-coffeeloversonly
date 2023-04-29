@@ -3,7 +3,7 @@ I wanted to create a very simple database so that a small coffee shop owner coul
 
 The fully deployed project can be accessed here: https://coffee-lovers-only.herokuapp.com/
 
-~SCREENSHOT~
+
 
 UX/UI
 STRATEGY

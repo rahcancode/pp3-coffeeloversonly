@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
+import sys
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -129,7 +130,7 @@ def main():
     sales_columns = get_last_5_entries_sales()
     stock_data = calculate_stock_data(sales_columns)
     update_worksheet(stock_data, "stock")
-
+    sys.exit("Thanks for adding the data. Have a great day!")
 
 f= open ('coffee_art.txt','r')
 print(''.join([line for line in f]))
