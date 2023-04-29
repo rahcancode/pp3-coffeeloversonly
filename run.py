@@ -21,9 +21,10 @@ def get_sales_data():
     by commas. The loop will repeatedly request data, until it is valid.
     """
     while True:
-        print("Enter the number of coffees sold during the last shift.")
-        print("Data should be six numbers, separated by commas.")
-        print("Example: 1,2,3,4,5,6\n")
+        print("Enter the number of each coffee sold during the shift.")
+        print("Order of coffee data: americano, cappuccino, flat white, iced cafe, latte, mocha")
+        print("There should be six values entered, separated by commas.")
+        print("Example: 10, 6, 8, 2, 12, 4\n")
 
         data_str = input("Enter the number of coffees sold today:\n")
 
@@ -73,7 +74,7 @@ def calculate_surplus_data(sales_row):
     - Positive surplus indicates waste
     - Negative surplus indicates extra made when stock was sold out.
     """
-    print("Calculating surplus coffee beans...\n")
+    print("Counting surplus coffee beans...\n")
     stock = SHEET.worksheet("stock").get_all_values()
     stock_row = stock[-1]
     surplus_data = []
@@ -104,7 +105,7 @@ def calculate_stock_data(data):
     """
     Calculate the average stock for each item type, adding 5%
     """
-    print("Counting coffee beans...\n")
+    print("Frothing milk and counting coffee beans...\n")
     new_stock_data = []
 
     for column in data:
@@ -131,7 +132,6 @@ def main():
 
 
 f= open ('coffee_art.txt','r')
-
 print(''.join([line for line in f]))
 print("Welcome to the Coffee Lovers Only end of shift tally")
 main()
