@@ -23,7 +23,8 @@ def get_sales_data():
     """
     while True:
         print("Enter the number of each coffee sold during the shift.")
-        print("Order of coffee data: americano, cappuccino, flat white, iced cafe, latte, mocha")
+        print("Order of coffee data:")
+        print("americano, cappuccino, flat white, iced cafe, latte, mocha")
         print("There should be six values entered, separated by commas.")
         print("Example: 10, 6, 8, 2, 12, 4\n")
 
@@ -48,7 +49,7 @@ def validate_data(values):
         [int(value) for value in values]
         if len(values) != 6:
             raise ValueError(
-                f"You might need more coffee! Exactly 6 values are required, but you provided {len(values)}"
+                f"Exactly 6 values are required, you provided {len(values)}"
             )
     except ValueError as e:
         print(f"That was invalid data: {e}, please try again.\n")
@@ -65,7 +66,7 @@ def update_worksheet(data, worksheet):
     print(f"Roasting coffee beans and updating {worksheet} worksheet...\n")
     worksheet_to_update = SHEET.worksheet(worksheet)
     worksheet_to_update.append_row(data)
-    print(f"{worksheet} The beans are nicely roasted. Worksheet updated successfully!\n")
+    print(f"{worksheet} The beans are nicely roasted. Worksheet updated!\n")
 
 
 def calculate_surplus_data(sales_row):
@@ -132,7 +133,9 @@ def main():
     update_worksheet(stock_data, "stock")
     sys.exit("Thanks for adding the data. Have a great day!")
 
-f= open ('coffee_art.txt','r')
+
+f = open('coffee_art.txt', 'r')
+
 print(''.join([line for line in f]))
 print("Welcome to the Coffee Lovers Only end of shift tally")
 main()
