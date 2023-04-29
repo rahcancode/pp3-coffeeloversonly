@@ -1,6 +1,5 @@
 import gspread
 from google.oauth2.service_account import Credentials
-from pprint import pprint
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -16,17 +15,17 @@ SHEET = GSPREAD_CLIENT.open('coffee_lovers_only')
 
 def get_sales_data():
     """
-    Get sales figures input from the user.
-    Run a while loop to collect a valid string of data from the user
+    Get the number of coffees sold from the manager.
+    Run a while loop to collect the data from them
     via the terminal, which must be a string of 6 numbers separated
     by commas. The loop will repeatedly request data, until it is valid.
     """
     while True:
-        print("Please enter sales data from the last shift.")
+        print("Enter the number of coffees sold during the last shift.")
         print("Data should be six numbers, separated by commas.")
-        print("Example: 10,20,30,40,50,60\n")
+        print("Example: 1,2,3,4,5,6\n")
 
-        data_str = input("Enter your data here: ")
+        data_str = input("Enter the number of coffees sold:\n")
 
         sales_data = data_str.split(",")
 
@@ -104,7 +103,7 @@ def get_last_5_entries_sales():
 
 def calculate_stock_data(data):
     """
-    Calculate the average stock for each item type, adding 10%
+    Calculate the average stock for each item type, adding 5%
     """
     print("Calculating stock data...\n")
     new_stock_data = []
@@ -132,5 +131,5 @@ def main():
     update_worksheet(stock_data, "stock")
 
 
-print("Welcome to the Coffee Lovers Only Data Automation")
+print("Welcome to Coffee Lovers Only Data Automation")
 main()
